@@ -1,8 +1,12 @@
 class GoldCoin implements Coin {
+    private float x;
+    private float y;
+
+    private int value = 5;
+    
     GoldCoin(float x, float y) {
         this.x = x;
         this.y = y;
-        this.value = 5;
     }
 
     public float getX() {
@@ -13,7 +17,7 @@ class GoldCoin implements Coin {
         return y;
     }
 
-    public float getValue() {
+    public int getValue() {
         return value;
     }
 }

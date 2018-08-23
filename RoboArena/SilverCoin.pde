@@ -1,8 +1,12 @@
 class SilverCoin implements Coin {
+    private float x;
+    private float y;
+
+    private int value = 2;
+
     SilverCoin(float x, float y) {
         this.x = x;
         this.y = y;
-        this.value = 2;
     }
 
     public float getX() {
@@ -13,7 +17,7 @@ class SilverCoin implements Coin {
         return y;
     }
 
-    public float getValue() {
+    public int getValue() {
         return value;
     }
 }
