@@ -7,26 +7,28 @@ class SquareBot extends Robot {
         lastMove = "none";
     }
 
-    @override
+    @Override
     //Determines which way the Robot will move this turn
-    public String decideMove(Coin[] coins, Robot[] bots) {
+    public String decideMove(ArrayList<Coin> coins, ArrayList<Robot> bots) {
         switch (lastMove) {
             case "none":
-                return "up";
+                lastMove = "up";
                 break;
             case "up":
-                return "right";
+                lastMove = "right";
                 break;
             case "right":
-                return "down";
+                lastMove = "down";
                 break;
             case "down":
-                return "left";
+                lastMove = "left";
                 break;
             case "left":
-                return "none";
+                lastMove = "none";
                 break;
         }
+
+        return lastMove;
     }
 
 }
